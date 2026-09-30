@@ -11,13 +11,17 @@ public class Car{
         }
     }
     public void addGas(double q){
-        if(q>0.0){
+        if(0<q && q<=50){
             this.quantita+=q;
         }
     }
-    public void drive(double km){
+    public boolean drive(double km){
         if(km>0.0 && (km*this.resa)<=this.quantita){
-            this.quantita-=(km*this.resa);
+            double litriUsati=km*this.resa;
+            this.quantita-=litriUsati;
+            return true;
+        }else{
+            return false;
         }
     }
     public double getGas(){

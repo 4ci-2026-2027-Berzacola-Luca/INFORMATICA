@@ -16,10 +16,11 @@ public class DistributoreBenzina{
         }
     }
     public void vendi(double euro, Car Auto){
-        if(euro/this.euroPerLitro <= this.deposito){
-            this.deposito-=(euro/this.euroPerLitro);
+        double litriRichiesti=euro/this.euroPerLitro;
+        if(litriRichiesti <= this.deposito){
+            this.deposito-=litriRichiesti;
         }
-        Auto.addGas(euro/this.euroPerLitro);
+        Auto.addGas(litriRichiesti);
     }
     public void aggiorna(double epl){
         if(epl>0.0){
@@ -27,6 +28,9 @@ public class DistributoreBenzina{
         }
     }
     public String toString(){
-        return "Deposito: " + this.deposito + "Euro per litro: " + this.euroPerLitro;
+        String out="";
+        out+="Deposito: " + this.deposito;
+        out+=" Euro Per Litro: " + this.euroPerLitro;
+        return out;
     }
 }
