@@ -1,0 +1,5 @@
+Luca;120.0
+Giacomo;600.0
+Linda;45.50
+Tiziano;-20.0
+Loredana;15.30
