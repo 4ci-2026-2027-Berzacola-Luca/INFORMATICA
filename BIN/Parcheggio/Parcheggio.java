@@ -42,8 +42,6 @@ public class Parcheggio {
         return this.costoOrario;
     }
 
-
-
     //metodo entra
     public boolean entra(Car auto){
         if(this.postiDisponibili > 0){
@@ -65,6 +63,15 @@ public class Parcheggio {
             return costo;
         }
     }
+    //set per aggiornare il costo orario
+    public void setCosto(double co){
+        if(co >= 0.0){
+            this.costoOrario=co;
+        }else{
+            this.costoOrario=0.0;
+        }
+    }
+
     //toString
     public String toString(){
         String out="";
