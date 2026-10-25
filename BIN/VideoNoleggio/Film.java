@@ -44,5 +44,29 @@ public class Film {
     }
 
     //Metodo get
-    
+    public String getTitolo(){
+        return this.titolo;
+    }
+    public String getRegista(){
+        return this.regista;
+    }
+    public boolean isDisponibile(){
+        return this.disponibile;
+    }
+
+    //Metodo noleggia
+    public void noleggia(){
+        if(!this.disponibile){
+            throw new IllegalStateException("Film non disponibile");
+        }
+        this.disponibile=false;
+    }
+
+    //Metodo restituisci
+    public void restituisci(){
+        if(this.disponibile){
+            throw new IllegalStateException("Film già disponibile");
+        }
+        this.disponibile=true;
+    }
 }
