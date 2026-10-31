@@ -26,13 +26,13 @@ public class VideoNoleggio {
     }
 
     //Metodi set
-    public String setNome(String n){
+    public void setNome(String n){
         if(n==null || n.trim().isEmpty()){
             throw new IllegalArgumentException("Il nome del video noleggio non può essere nullo o vuoto");
         }
         this.nome=n.trim();
     }
-    public int setNumeroFilmDisponibili(int numF){
+    public void setNumeroFilmDisponibili(int numF){
         if(numF<0){
             throw new IllegalArgumentException("Il numero di film disponibili non può essere minore di 0");
         }

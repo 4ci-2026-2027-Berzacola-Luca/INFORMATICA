@@ -7,8 +7,8 @@ public class Film {
 
     //Costruttore vuoto
     public Film(){
-        this.titolo=null;
-        this.regista=null;
+        this.titolo="Titolo sconosciuto";
+        this.regista="Regista sconosciuto";
         this.disponibile=true;
     }
 
